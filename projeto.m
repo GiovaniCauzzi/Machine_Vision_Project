@@ -51,7 +51,7 @@ while (hasFrame(videoData) ) % & frameCounter < frame2Stop)
     % ---    
     % Por algum motivo, a janela de plot s� abre se colocar um breakpoint
     % na linha seguinte
-    % displayImagesSideBySideWithRectangle(frame, regiaoInteresseFrame, xCenter, yCenter, xSquare, ySquare, centerX,centerY)
+    displayImagesSideBySideWithRectangle(frame, regiaoInteresseFrame, xCenter, yCenter, xSquare, ySquare, centerX,centerY)
 
     % Update progress
     progressPercent = (frameCounter / totalFrames) * 100;
@@ -75,11 +75,7 @@ audioArray = audioArray*(1/max(audioArray));
 
 % Arquivos de saida
 audiowrite('OutputVideos\output.wav', audioArray, 960);
-sound(audioArray,960)
-
-% Arquivos de saida 
-audiowrite('OutputVideos\output.wav', audioArray, 960);
-sound(audioArray,960)
+% sound(audioArray,960)
 
 subplot(1, 2, 1); 
 plot(audioArray)
